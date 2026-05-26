@@ -19,9 +19,10 @@ public class SaveCustomer {
                 "Anjali",
                 "anjali@gmail.com",
                 9876543210L,
-                "Delhi"
+                "Sec-14",12,"gurgaon", "Haryana",true,'F'
         );
 
+       
         et.begin();
 
         em.persist(c);

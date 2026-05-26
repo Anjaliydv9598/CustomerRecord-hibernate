@@ -3,7 +3,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "customer detail")
 public class Customer {
 
     @Id
@@ -13,57 +13,112 @@ public class Customer {
     private String email;
     private long phone;
     private String address;
+    private int age;  
+    private String city;
+    private String state;
+    private boolean isActive;          // true/false
+    private char gender;
 
     public Customer() {
     }
+    
+    public Customer(int cid, String cname, String email, long phone, String address, int age, String city, String state,
+			boolean isActive, char gender) {
+		super();
+		this.cid = cid;
+		this.cname = cname;
+		this.email = email;
+		this.phone = phone;
+		this.address = address;
+		this.age = age;
+		this.city = city;
+		this.state = state;
+		this.isActive = isActive;
+		this.gender = gender;
+	}
 
-    public Customer(int cid, String cname, String email,
-                    long phone, String address) {
+	public int getCid() {
+		return cid;
+	}
 
-        this.cid = cid;
-        this.cname = cname;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-    }
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
 
-    public int getCid() {
-        return cid;
-    }
+	public String getCname() {
+		return cname;
+	}
 
-    public void setCid(int cid) {
-        this.cid = cid;
-    }
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
 
-    public String getCname() {
-        return cname;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setCname(String cname) {
-        this.cname = cname;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public long getPhone() {
+		return phone;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setPhone(long phone) {
+		this.phone = phone;
+	}
 
-    public long getPhone() {
-        return phone;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public void setPhone(long phone) {
-        this.phone = phone;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public int getAge() {
+		return age;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+
+
+	
+
 }
